@@ -1,0 +1,173 @@
+.footer {
+	padding: 50px 80px 197px;
+
+	color: #393939;
+}
+
+.header {
+	font-family: var(--font-raleway-extra-bold);
+	font-size: 30px;
+	line-height: 35px;
+}
+
+.contacts {
+	margin: 50px 0 63px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(211px, 258px));
+	column-gap: 92px;
+	row-gap: 20px;
+}
+
+.contacts_block {
+	margin-top: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4px;
+	font-family: var(--font-onest-semibold);
+	font-size: 19px;
+}
+
+.mail {
+	font-family: var(--font-onest-regular);
+	font-size: 10px;
+
+	color: var(--color-grey);
+}
+
+.contacts_links {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+
+	font-family: var(--font-onest-regular);
+	font-size: 10px;
+
+	color: var(--color-grey);
+}
+
+.contacts_links li a {
+	color: var(--color-grey);
+}
+
+.contacts_links li a:hover {
+	color: black;
+}
+
+.phone {
+	font-family: var(--font-onest-bold);
+	font-size: 24px;
+	color: var(--color-yellow-dark);
+}
+
+.button {
+	width: 164px;
+}
+
+.logo_mobile {
+	display: none;
+}
+
+.header_menu {
+	display: flex;
+	flex-direction: row;
+	color: #393939;
+}
+
+.header_nav {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(83px, 156px));
+	gap: 40px;
+
+	font-family: var(--font-onest-semibold);
+	font-size: 14px;
+	color: #393939;
+}
+
+.social480 {
+	display: none;
+}
+
+@media screen and (max-width: 1000px) {
+	.footer {
+		padding: 50px 89px 184px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.footer {
+		padding: 50px 31px 93px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		padding: 40px 20px 373px;
+	}
+
+	.contacts {
+		margin: 30px 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.logo {
+		width: 160px;
+		height: 54px;
+	}
+
+	.contacts_block:nth-child(4) {
+		order: 5;
+	}
+
+	.button {
+		order: 6;
+	}
+
+	.socialLinks {
+		display: none;
+	}
+
+	.social480 {
+		display: block;
+		order: 5;
+	}
+
+	.header_nav {
+		margin-left: 20px;
+		grid-template-columns: repeat(2, minmax(83px, 155px));
+		row-gap: 8px;
+		column-gap: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.footer {
+		padding: 30px 20px 330px;
+	}
+
+	.logo_mobile {
+		display: block;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.header_nav,
+	.header_menu {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.socialLinks {
+		display: block;
+		margin-left: 20px;
+	}
+
+	.header_nav {
+		order: 2;
+	}
+}

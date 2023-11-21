@@ -1,0 +1,175 @@
+.page_wrapper {
+	position: relative;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 21px 20px 0px 20px;
+	max-width: 1200px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.logo {
+	margin-right: 76px;
+}
+
+.info {
+	margin: 0 30px 0 0;
+	width: 130px;
+
+	font-size: 12px;
+	font-family: var(--font-raleway-regular);
+
+	color: var(--color-black-text);
+}
+
+.info :nth-child(2) {
+	margin-top: 2px;
+	font-size: 14px;
+	font-family: var(--font-onest-bold);
+
+	color: var(--color-yellow-dark);
+}
+
+.info :nth-child(3) {
+	margin-top: 2px;
+	font-family: var(--font-onest-semibold);
+}
+
+.header_menu {
+	width: 463px;
+	height: 35px;
+
+	margin-right: 50px;
+}
+
+.header_nav {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-self: center;
+	gap: 11px;
+
+	font-size: 12px;
+	line-height: 15px;
+	font-family: var(--font-onest-semibold);
+}
+
+.li {
+	padding: 0 10px;
+	line-height: 15px;
+}
+
+.button_menu {
+	display: none;
+}
+
+.button {
+	width: 164px;
+}
+
+@media screen and (max-width: 1165px) {
+	.page_wrapper {
+		max-width: 1000px;
+	}
+
+	.header_menu {
+		margin-top: 8px;
+		max-width: 242px;
+		min-height: 38px;
+		margin-right: 31px;
+	}
+
+	.header_nav {
+		display: grid;
+		grid-template-columns: auto auto;
+		column-gap: 25px;
+		row-gap: 8px;
+	}
+	.li {
+		padding: 0;
+	}
+
+	.logo {
+		margin-right: 69px;
+		width: 203px;
+		height: 69px;
+	}
+
+	.info {
+		margin: 8px 32px 0 0;
+	}
+
+	.button {
+		margin-top: 8px;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.page_wrapper {
+		max-width: 768px;
+	}
+
+	.header_menu {
+		display: none;
+	}
+
+	.logo {
+		margin-right: 69px;
+		width: 203px;
+		height: 69px;
+	}
+
+	.info {
+		margin: 0 33px 0 0;
+	}
+
+	.button_menu {
+		display: block;
+		margin-right: 24px;
+	}
+}
+
+@media screen and (max-width: 765px) {
+	.page_wrapper {
+		padding: 20px;
+		max-width: 480px;
+	}
+	.logo {
+		width: 180px;
+		height: 61px;
+		margin-right: 52px;
+	}
+
+	.info {
+		margin-right: 14px;
+	}
+
+	.button {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 465px) {
+	.page_wrapper {
+		width: 100%;
+		padding: 10px 10px 330px;
+	}
+	.logo {
+		width: 147px;
+		height: 50px;
+		margin-right: 10px;
+	}
+
+	.info {
+		box-sizing: content-box;
+		margin-right: 10px;
+		width: 115px;
+	}
+	.button_menu {
+		margin: 10px;
+	}
+}

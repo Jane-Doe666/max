@@ -1,0 +1,40 @@
+.button {
+	width: 100%;
+	max-height: 35px;
+	padding: 9px 0px;
+
+	font-size: 13px;
+	font-family: var(--font-onest-semibold);
+
+	border-radius: 8px;
+	background-color: var(--color-yellow-light);
+}
+
+.button_menu {
+	box-sizing: border-box;
+	padding: 15px 11px;
+
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50px;
+	background-color: #ffd447;
+}
+
+.line {
+	height: 2px;
+	width: 18px;
+	margin-bottom: 3px;
+
+	background-color: black;
+}
+
+.buttonScroll {
+	width: 52px;
+	height: 39px;
+
+	border-radius: 15px;
+	border: solid #e2e5e9 1px;
+
+	background-color: white;
+}

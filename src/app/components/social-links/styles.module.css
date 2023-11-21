@@ -1,0 +1,9 @@
+.socialIcons {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.socialIcons li:hover {
+	cursor: pointer;
+}
