@@ -24,8 +24,6 @@ header {
 }
 
 main {
-	margin-top: 100px;
-	text-align: center;
 	flex-grow: 1;
 }
 
