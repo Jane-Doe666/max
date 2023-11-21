@@ -12,7 +12,7 @@ export function Service() {
 			</p>
 			<div className={styles.services_block}>
 				{serviceArray.map((item) => (
-					<div className={styles.service_item}>
+					<div className={styles.service_item} key={item.header}>
 						<div className={styles.round_check}>
 							<Image
 								src="/vector-flag.svg"

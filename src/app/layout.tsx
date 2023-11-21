@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/Header";
 import "./reset.css";
 import "./globals.css";
 import { fontClassNames } from "./font/font";
 import styles from "./components/header/styles.module.css";
+import { FooterBlock } from "./components/footer/FooterBlock";
 
 export const metadata: Metadata = {
 	title: "Max Container",
@@ -22,7 +22,7 @@ export default function RootLayout({
 				<div className={styles.page_wrapper}>
 					<Header />
 					<main>{children}</main>
-					{/* <Footer /> */}
+					<FooterBlock />
 				</div>
 			</body>
 		</html>

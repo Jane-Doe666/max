@@ -3,7 +3,10 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-export const MenuModal = forwardRef<HTMLDivElement>((props, ref) => {
+export const MenuModal = forwardRef<
+	HTMLDivElement,
+	{ children?: React.ReactNode }
+>((props, ref) => {
 	return (
 		<div ref={ref} className={styles.modal}>
 			<nav className={styles.header_menu}>
@@ -28,3 +31,5 @@ export const MenuModal = forwardRef<HTMLDivElement>((props, ref) => {
 		</div>
 	);
 });
+
+MenuModal.displayName = "MenuModal";

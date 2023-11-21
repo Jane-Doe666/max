@@ -3,9 +3,8 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import { SocialLinks } from "../social-links/SocialLinks";
 import { ButtonUI } from "../button/ButtonUI";
-import { MenuModal } from "../menu-modal/MenuModal";
 
-const Footer = () => {
+export const FooterBlock = () => {
 	return (
 		<footer className={styles.footer}>
 			<Link href="/">
@@ -102,5 +101,3 @@ const Footer = () => {
 		</footer>
 	);
 };
-
-export { Footer };
