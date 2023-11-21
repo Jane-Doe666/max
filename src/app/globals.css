@@ -24,11 +24,13 @@ header {
 }
 
 main {
+	margin-top: 100px;
+	text-align: center;
 	flex-grow: 1;
 }
 
 footer {
-	height: 808px;
+	height: 721px;
 }
 
 a {
