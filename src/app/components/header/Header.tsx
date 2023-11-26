@@ -5,18 +5,48 @@ import styles from "./styles.module.css";
 import { ButtonUI } from "../button/ButtonUI";
 import { ButtonMenu } from "../button/ButtonMenu";
 import { MenuModal } from "../menu-modal/MenuModal";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+export type TVisibility = "visible" | "hidden";
 
 const Header = () => {
 	const refMenu = useRef<HTMLDivElement>(null);
+	const refMenuButton = useRef<HTMLDivElement>(null);
+	const [isOpen, setIsOpen] = useState<TVisibility>("hidden");
 
-	const handleOpenMenu = () => {
-		if (refMenu.current) {
-			refMenu.current.style.display === "block"
-				? (refMenu.current.style.display = "none")
-				: (refMenu.current.style.display = "block");
-		}
+	const handleToggleMenu = () => {
+		setIsOpen((prevIsOpen) =>
+			prevIsOpen === "visible" ? "hidden" : "visible"
+		);
 	};
+
+	useEffect(() => {
+		const handleClose = (event: MouseEvent | KeyboardEvent) => {
+			if (event instanceof KeyboardEvent && event.key === "Escape") {
+				setIsOpen("hidden");
+				return;
+			}
+
+			const target = event.target as Node;
+
+			if (
+				refMenu.current &&
+				!refMenu.current.contains(target) &&
+				refMenuButton.current &&
+				!refMenuButton.current.contains(target)
+			) {
+				setIsOpen("hidden");
+			}
+		};
+
+		document.addEventListener("click", handleClose);
+		document.addEventListener("keydown", handleClose);
+
+		return () => {
+			document.removeEventListener("click", handleClose);
+			document.removeEventListener("keydown", handleClose);
+		};
+	}, []);
 
 	return (
 		<header>
@@ -43,17 +73,24 @@ const Header = () => {
 						<Link href="/dry_cargo">Сухогрузные</Link>
 					</li>
 					<li className={styles.li}>
-						<Link href="/rental">Аренда контейнеров</Link>
+						<Link href="/rent">Аренда контейнеров</Link>
 					</li>
 					<li className={styles.li}>
 						<Link href="/contacts">Контакты</Link>
 					</li>
 				</ul>
 			</nav>
-			<MenuModal ref={refMenu} />
-			<div className={styles.button_menu}>
-				<ButtonMenu onClick={handleOpenMenu} />
+
+			<MenuModal
+				handleMenuClick={handleToggleMenu}
+				ref={refMenu}
+				isOpen={isOpen}
+			/>
+
+			<div className={styles.button_menu} ref={refMenuButton}>
+				<ButtonMenu onClick={handleToggleMenu} />
 			</div>
+
 			<div className={styles.button}>
 				<ButtonUI name="Обратный звонок" />
 			</div>

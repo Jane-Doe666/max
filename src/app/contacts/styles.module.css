@@ -1,0 +1,43 @@
+.container {
+	width: 100%;
+	min-height: 430px;
+	display: flex;
+	flex-direction: row;
+
+	background-color: white;
+	border-radius: 15px;
+}
+
+.info {
+	width: 275px;
+}
+
+.photo {
+	flex: 1;
+
+	height: auto;
+
+	background-image: url(/containers-stret.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+@media screen and (max-width: 765px) {
+	.info {
+		width: 231px;
+	}
+	.photo {
+		background-size: 490%;
+		background-position: -210px -60px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.photo {
+		background-size: 800%;
+		background-position: -390px 0px;
+	}
+}

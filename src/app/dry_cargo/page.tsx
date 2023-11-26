@@ -1,3 +1,9 @@
+import DryContainer from "./DryContainer";
+
 export default function DryCargo() {
-	return <h1>Dry Cargo</h1>;
+	return (
+		<section>
+			<DryContainer />
+		</section>
+	);
 }

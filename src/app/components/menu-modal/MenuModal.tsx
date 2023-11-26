@@ -2,13 +2,17 @@
 import styles from "./styles.module.css";
 import Link from "next/link";
 import { forwardRef } from "react";
+import { TVisibility } from "../header/Header";
 
 export const MenuModal = forwardRef<
 	HTMLDivElement,
-	{ children?: React.ReactNode }
->((props, ref) => {
+	{
+		handleMenuClick: () => void;
+		isOpen: TVisibility;
+	}
+>(({ handleMenuClick, isOpen }, ref) => {
 	return (
-		<div ref={ref} className={styles.modal}>
+		<div ref={ref} onClick={handleMenuClick} className={styles[isOpen]}>
 			<nav className={styles.header_menu}>
 				<ul>
 					<li className={styles.li}>

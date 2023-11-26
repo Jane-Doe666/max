@@ -6,7 +6,9 @@ import styles from "./styles.module.css";
 export function HomePage() {
 	return (
 		<section className={styles.contacts_wrapper}>
-			<ContactsBlock />
+			<div className={styles.info}>
+				<ContactsBlock />
+			</div>
 
 			<div className={styles.services}>
 				<h2 className={styles.header_service}>

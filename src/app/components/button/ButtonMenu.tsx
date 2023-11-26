@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 type TButton = {
-	onClick: () => void;
+	onClick: (event: React.MouseEvent) => void;
 };
 
 export function ButtonMenu({ onClick }: TButton) {

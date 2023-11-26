@@ -1,8 +1,7 @@
 .contacts {
 	box-sizing: border-box;
-	width: 24.6%;
 	height: 100%;
-	padding: 25px 0px 39px 30px;
+	padding: 25px 0px 30px 30px;
 
 	color: var(--color-black-header);
 	background-color: white;
@@ -72,19 +71,7 @@
 	color: var(--color-grey);
 }
 
-@media screen and (max-width: 1165px) {
-	.contacts {
-		width: 35.7%;
-	}
-}
-
 @media screen and (max-width: 920px) {
-	.contacts {
-		width: 37.43%;
-		height: 100%;
-		padding: 25px 30px;
-	}
-
 	.contacts_block {
 		gap: 2px;
 	}
@@ -104,17 +91,8 @@
 	}
 }
 
-@media screen and (max-width: 765px) {
-	.contacts {
-		width: 100%;
-		height: 100%;
-	}
-}
-
 @media screen and (max-width: 480px) {
 	.contacts {
-		box-sizing: border-box;
-		width: 100%;
-		padding: 25px 20px;
+		padding-left: 20px;
 	}
 }
