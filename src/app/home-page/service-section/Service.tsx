@@ -30,18 +30,18 @@ export function Service() {
 			<div className={styles.clients_block}>
 				<div className={styles.container_image}>
 					<Image
+						className={styles.image}
 						src="/myasokomb.svg"
-						layout="responsive"
+						alt="myasokombat"
 						width={212}
 						height={87}
-						alt="myasokombat"
 					/>
 				</div>
 
 				<div className={styles.container_image}>
 					<Image
+						className={styles.image}
 						src="/baltic.svg"
-						layout="responsive"
 						width={155}
 						height={111}
 						alt="baltic"
@@ -49,8 +49,8 @@ export function Service() {
 				</div>
 				<div className={styles.container_image}>
 					<Image
+						className={styles.image}
 						src="/petelinka.svg"
-						layout="responsive"
 						width={175}
 						height={117}
 						alt="petelinka"
@@ -58,8 +58,8 @@ export function Service() {
 				</div>
 				<div className={styles.container_image}>
 					<Image
+						className={styles.image}
 						src="/kotleta.svg"
-						layout="responsive"
 						width={251}
 						height={95}
 						alt="kotleta"

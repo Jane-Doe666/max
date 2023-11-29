@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 import { ButtonUI } from "../button/ButtonUI";
 import { ButtonMenu } from "../button/ButtonMenu";
 import { MenuModal } from "../menu-modal/MenuModal";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useAppDispatch } from "@/app/lib/hooks";
 import { handleClick } from "../../utils/func";
 import useCloseOutsideEl from "../../hooks/useCloseOutsideEl";
@@ -13,7 +13,6 @@ import useCloseOutsideEl from "../../hooks/useCloseOutsideEl";
 export type TVisibility = "visible" | "hidden";
 
 const Header = () => {
-	// const refMenu = useRef<HTMLDivElement>(null);
 	const refMenuButton = useRef<HTMLDivElement>(null);
 	const [isOpen, setIsOpen] = useState<TVisibility>("hidden");
 	const dispatch = useAppDispatch();
@@ -24,10 +23,7 @@ const Header = () => {
 		);
 	};
 
-	useEffect(() => {
-		const cleanUp = useCloseOutsideEl(refMenuButton, setIsOpen);
-		return cleanUp;
-	}, [refMenuButton, setIsOpen]);
+	useCloseOutsideEl(refMenuButton, setIsOpen);
 
 	return (
 		<header>

@@ -5,31 +5,13 @@ export function SocialLinks() {
 	return (
 		<ul className={styles.socialIcons}>
 			<li>
-				<Image
-					src="/telegram.svg"
-					alt="telegram"
-					width={21}
-					height={21}
-					objectFit="cover"
-				/>
+				<Image src="/telegram.svg" alt="telegram" width={21} height={21} />
 			</li>
 			<li>
-				<Image
-					src="/call.svg"
-					alt="call"
-					width={21}
-					height={21}
-					objectFit="cover"
-				/>
+				<Image src="/call.svg" alt="call" width={21} height={21} />
 			</li>
 			<li>
-				<Image
-					src="/mail.svg"
-					alt="mail"
-					width={21}
-					height={21}
-					objectFit="cover"
-				/>
+				<Image src="/mail.svg" alt="mail" width={21} height={21} />
 			</li>
 		</ul>
 	);

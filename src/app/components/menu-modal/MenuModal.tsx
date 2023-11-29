@@ -23,7 +23,7 @@ export const MenuModal = ({
 					</li>
 
 					<li className={styles.li}>
-						<Link href="/contacts">Аренда контейнеров</Link>
+						<Link href="/rent">Аренда контейнеров</Link>
 					</li>
 
 					<li className={styles.li}>

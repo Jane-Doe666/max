@@ -98,7 +98,7 @@ export const FooterBlock = () => {
 						<Link href="/dry_cargo">Сухогрузные</Link>
 					</li>
 					<li>
-						<Link href="/rental">Аренда контейнеров</Link>
+						<Link href="/rent">Аренда контейнеров</Link>
 					</li>
 					<li>
 						<Link href="/contacts">Контакты</Link>

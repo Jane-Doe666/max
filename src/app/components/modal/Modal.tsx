@@ -22,12 +22,7 @@ export function Modal() {
 		dispatch(modalClose());
 	};
 
-	useEffect(() => {
-		if (isModal) {
-			const cleanUp = useCloseOutsideEl(modalRef, handleClose);
-			return cleanUp;
-		}
-	}, [isModal, handleClose]);
+	useCloseOutsideEl(modalRef, handleClose, isModal);
 
 	return (
 		<div className={isModal ? styles.visible : styles.hidden}>
