@@ -6,13 +6,17 @@ import { ButtonUI } from "../button/ButtonUI";
 import { ButtonMenu } from "../button/ButtonMenu";
 import { MenuModal } from "../menu-modal/MenuModal";
 import { useEffect, useRef, useState } from "react";
+import { useAppDispatch } from "@/app/lib/hooks";
+import { handleClick } from "../../utils/func";
+import useCloseOutsideEl from "../../hooks/useCloseOutsideEl";
 
 export type TVisibility = "visible" | "hidden";
 
 const Header = () => {
-	const refMenu = useRef<HTMLDivElement>(null);
+	// const refMenu = useRef<HTMLDivElement>(null);
 	const refMenuButton = useRef<HTMLDivElement>(null);
 	const [isOpen, setIsOpen] = useState<TVisibility>("hidden");
+	const dispatch = useAppDispatch();
 
 	const handleToggleMenu = () => {
 		setIsOpen((prevIsOpen) =>
@@ -21,32 +25,9 @@ const Header = () => {
 	};
 
 	useEffect(() => {
-		const handleClose = (event: MouseEvent | KeyboardEvent) => {
-			if (event instanceof KeyboardEvent && event.key === "Escape") {
-				setIsOpen("hidden");
-				return;
-			}
-
-			const target = event.target as Node;
-
-			if (
-				refMenu.current &&
-				!refMenu.current.contains(target) &&
-				refMenuButton.current &&
-				!refMenuButton.current.contains(target)
-			) {
-				setIsOpen("hidden");
-			}
-		};
-
-		document.addEventListener("click", handleClose);
-		document.addEventListener("keydown", handleClose);
-
-		return () => {
-			document.removeEventListener("click", handleClose);
-			document.removeEventListener("keydown", handleClose);
-		};
-	}, []);
+		const cleanUp = useCloseOutsideEl(refMenuButton, setIsOpen);
+		return cleanUp;
+	}, [refMenuButton, setIsOpen]);
 
 	return (
 		<header>
@@ -81,18 +62,19 @@ const Header = () => {
 				</ul>
 			</nav>
 
-			<MenuModal
-				handleMenuClick={handleToggleMenu}
-				ref={refMenu}
-				isOpen={isOpen}
-			/>
+			<MenuModal handleMenuClick={handleToggleMenu} isOpen={isOpen} />
 
 			<div className={styles.button_menu} ref={refMenuButton}>
 				<ButtonMenu onClick={handleToggleMenu} />
 			</div>
 
 			<div className={styles.button}>
-				<ButtonUI name="Обратный звонок" />
+				<ButtonUI
+					name="Обратный звонок"
+					onClick={() =>
+						handleClick({ dispatch, buttonName: "Обратный звонок" })
+					}
+				/>
 			</div>
 		</header>
 	);

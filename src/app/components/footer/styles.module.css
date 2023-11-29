@@ -76,7 +76,8 @@
 .header_nav {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(83px, 156px));
-	gap: 40px;
+	column-gap: 40px;
+	row-gap: 12px;
 
 	font-family: var(--font-onest-semibold);
 	font-size: 14px;

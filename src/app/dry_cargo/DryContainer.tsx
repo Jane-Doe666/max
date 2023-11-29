@@ -1,7 +1,6 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { ButtonUI } from "../components/button/ButtonUI";
-import ContactsPage from "../contacts/ContactsPage";
 import { Invitation } from "../home-page/Invitation-section/Invitation";
 
 export default function DryContainer() {

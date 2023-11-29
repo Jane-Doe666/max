@@ -297,6 +297,7 @@
 
 @media screen and (max-width: 465px) {
 	.contacts_wrapper {
+		margin-top: 0;
 		row-gap: 10px;
 	}
 	.media_mid {

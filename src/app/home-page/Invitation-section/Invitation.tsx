@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import styles from "./styles.module.css"; // Замените на путь к вашему CSS файлу
 import { ButtonUI } from "@/app/components/button/ButtonUI";
 import { SocialLinks } from "@/app/components/social-links/SocialLinks";
+import { handleClick } from "@/app/utils/func";
+import { useAppDispatch } from "@/app/lib/hooks";
 
 export function Invitation() {
+	const dispatch = useAppDispatch();
 	return (
 		<section className={styles.container}>
 			<div className={styles.info}>
@@ -23,7 +27,12 @@ export function Invitation() {
 				</p>
 				<div className={styles.phone}>8 800 808 77 77</div>
 				<div className={styles.button}>
-					<ButtonUI name="Оставить свой номер" />
+					<ButtonUI
+						name="Оставить свой номер"
+						onClick={() =>
+							handleClick({ dispatch, buttonName: "Оставить свой номер" })
+						}
+					/>
 				</div>
 				<SocialLinks />
 			</div>

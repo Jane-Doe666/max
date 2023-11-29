@@ -1,10 +1,13 @@
+"use client";
 import { ButtonUI } from "../components/button/ButtonUI";
-import ContactsPage from "../contacts/ContactsPage";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { Invitation } from "../home-page/Invitation-section/Invitation";
+import { handleClick } from "../utils/func";
+import { useAppDispatch } from "../lib/hooks";
 
 export default function Rental() {
+	const dispatch = useAppDispatch();
 	return (
 		<section>
 			<div className={styles.rent}>
@@ -16,7 +19,12 @@ export default function Rental() {
 					<br /> рефрижераторный контейнер, чем приобрести его.
 				</p>
 				<div className={styles.button}>
-					<ButtonUI name="Заказать услугу" />
+					<ButtonUI
+						name="Заказать услугу"
+						onClick={() =>
+							handleClick({ dispatch, buttonName: "Заказать услугу" })
+						}
+					/>
 				</div>
 				<div className={styles.container_pict}>
 					<Image

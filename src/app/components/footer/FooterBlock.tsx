@@ -1,10 +1,15 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import { SocialLinks } from "../social-links/SocialLinks";
 import { ButtonUI } from "../button/ButtonUI";
+import { handleClick } from "@/app/utils/func";
+import { useAppDispatch } from "@/app/lib/hooks";
 
 export const FooterBlock = () => {
+	const dispatch = useAppDispatch();
+
 	return (
 		<footer className={styles.footer}>
 			<Link href="/">
@@ -30,7 +35,12 @@ export const FooterBlock = () => {
 			<div className={styles.contacts}>
 				<h2 className={styles.header}>Контакты</h2>
 				<div className={styles.button}>
-					<ButtonUI name="Обратный звонок" />
+					<ButtonUI
+						name="Обратный звонок"
+						onClick={() =>
+							handleClick({ dispatch, buttonName: "Обратный звонок" })
+						}
+					/>
 				</div>
 
 				<div className={styles.contacts_block}>

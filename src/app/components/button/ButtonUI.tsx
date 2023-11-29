@@ -3,15 +3,16 @@ import styles from "./styles.module.css";
 
 type TButton = {
 	name: string;
+	onClick?: () => void;
 };
 
 type ButtonArrProps = {
 	onClick: () => void;
 };
 
-export function ButtonUI({ name }: TButton) {
+export function ButtonUI({ name, onClick }: TButton) {
 	return (
-		<button className={styles.button} type="button">
+		<button className={styles.button} type="button" onClick={onClick}>
 			{name}
 		</button>
 	);

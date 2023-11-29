@@ -1,3 +1,6 @@
+"use client";
+import { useAppDispatch } from "@/app/lib/hooks";
+import { handleClick } from "@/app/utils/func";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonUI } from "../button/ButtonUI";
@@ -13,15 +16,19 @@ type TProd = {
 };
 
 export function Product(item: TProd) {
+	const dispatch = useAppDispatch();
 	return (
 		<div className={styles.product}>
-			<Image
-				src="/container.png"
-				width={275}
-				height={286}
-				alt="container"
-				className={styles.container}
-			/>
+			<div onClick={() => handleClick({ dispatch, buttonName: "Подробнее" })}>
+				<Image
+					src="/container.png"
+					width={275}
+					height={225}
+					alt="container"
+					className={styles.container}
+				/>
+			</div>
+
 			<div className={styles.info}>
 				<Link href="#" className={styles.prod_name}>
 					{item.name}

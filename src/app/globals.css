@@ -11,6 +11,7 @@
 
 body {
 	height: 100%;
+	/* align-self: center; */
 	background-color: #f8f7f3;
 }
 
@@ -114,5 +115,8 @@ button:hover {
 	footer {
 		padding: 30px 20px 330px;
 		height: auto;
+	}
+	main {
+		padding-top: 35px;
 	}
 }

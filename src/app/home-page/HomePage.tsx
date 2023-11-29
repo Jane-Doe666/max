@@ -1,9 +1,14 @@
+"use client";
 import Image from "next/image";
 import { ButtonUI } from "../components/button/ButtonUI";
 import { ContactsBlock } from "../components/contacts/ContactsBlock";
+import { useAppDispatch } from "../lib/hooks";
+import { handleClick } from "../utils/func";
 import styles from "./styles.module.css";
 
 export function HomePage() {
+	const dispatch = useAppDispatch();
+
 	return (
 		<section className={styles.contacts_wrapper}>
 			<div className={styles.info}>
@@ -51,7 +56,12 @@ export function HomePage() {
 				</ul>
 
 				<div className={styles.button}>
-					<ButtonUI name="Обратный звонок" />
+					<ButtonUI
+						name="Обратный звонок"
+						onClick={() =>
+							handleClick({ dispatch, buttonName: "Обратный звонок" })
+						}
+					/>
 				</div>
 
 				<Image
