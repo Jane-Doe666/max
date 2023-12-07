@@ -10,6 +10,10 @@ export function Service() {
 				Можем осуществлять крупные поставки. Мы торгуем новыми
 				<br /> и подержанными контейнерами по всей России.
 			</p>
+			<p className={styles.service_info_mobile}>
+				Можем осуществлять крупные поставки. Мы торгуем <br /> новыми и
+				подержанными контейнерами по всей <br /> России.
+			</p>
 			<div className={styles.services_block}>
 				{serviceArray.map((item) => (
 					<div className={styles.service_item} key={item.header}>

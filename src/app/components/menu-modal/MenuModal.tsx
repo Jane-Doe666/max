@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import { TVisibility } from "../header/Header";
 
-export const MenuModal = ({
+const MenuModal = ({
 	handleMenuClick,
 	isOpen,
 }: {
@@ -34,3 +34,5 @@ export const MenuModal = ({
 		</div>
 	);
 };
+
+export { MenuModal };

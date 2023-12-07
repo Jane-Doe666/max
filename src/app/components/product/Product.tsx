@@ -15,17 +15,27 @@ type TProd = {
 	price: string;
 };
 
-export function Product(item: TProd) {
+export function Product(item: TProd & { hamburger: string }) {
+	const productClass =
+		item.hamburger === "hamburger" ? styles.productHamburger : styles.product;
+
 	const dispatch = useAppDispatch();
 	return (
-		<div className={styles.product}>
-			<div onClick={() => handleClick({ dispatch, buttonName: "Подробнее" })}>
+		<div className={productClass}>
+			<div
+				className={styles[item.hamburger] || styles.bento}
+				onClick={() => handleClick({ dispatch, buttonName: "Подробнее" })}>
 				<Image
 					src="/container.png"
+					alt="container"
 					width={275}
 					height={225}
-					alt="container"
-					className={styles.container}
+					sizes="100vw"
+					className={styles.myImage}
+					style={{
+						width: "100%",
+						height: "auto",
+					}}
 				/>
 			</div>
 

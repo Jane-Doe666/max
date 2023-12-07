@@ -22,7 +22,7 @@ export function HomePage() {
 				</h2>
 				<h2 className={styles.header_service_mid}>
 					Рефрижераторные и <br />
-					сухогрузные контейнеры <br />
+					сухогрузные&nbsp;контейнеры <br />
 					новые и Б/У
 				</h2>
 				<p className={styles.media_desc}>

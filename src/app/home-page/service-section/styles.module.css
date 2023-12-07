@@ -9,6 +9,12 @@
 	color: #393939;
 }
 
+.service_info_mobile {
+	display: none;
+	font-family: var(--font-raleway-regular);
+	font-size: 12px;
+}
+
 .service_info {
 	margin-top: 15px;
 	font-family: var(--font-raleway-regular);
@@ -173,12 +179,24 @@
 }
 
 @media screen and (max-width: 380px) {
+	.service_info {
+		display: none;
+	}
+	.service_info_mobile {
+		display: block;
+		margin-top: 10px;
+	}
 	.service_header {
+		margin-top: 30px;
 		font-size: 24px;
 	}
 
 	.service_info {
 		font-size: 12px;
+	}
+
+	.service_item {
+		padding: 30px 15px;
 	}
 
 	/* pict */
@@ -188,20 +206,10 @@
 		font-size: 24px;
 	}
 
-	/* .clients_block {
-		padding: 0 10px;
-		margin-top: 32px;
-
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 32px;
-		justify-items: center;
-	} */
-
 	.clients_block {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		row-gap: 32px; /* Отступ между колонками и рядами */
+		row-gap: 32px;
 		justify-content: start;
 		align-items: start;
 	}
@@ -233,5 +241,8 @@
 		grid-row: 2 / 3;
 		width: 169px;
 		height: 65px;
+	}
+	.services_block {
+		margin-top: 30px;
 	}
 }

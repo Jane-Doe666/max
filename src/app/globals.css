@@ -12,6 +12,7 @@
 body {
 	height: 100%;
 	background-color: #f8f7f3;
+	color: var(--color-black-text);
 }
 
 header {
@@ -61,10 +62,6 @@ button:hover {
 	header:last-child {
 		padding-top: 8px;
 	}
-
-	/* footer {
-		padding: 0px 89px 184px;
-	} */
 }
 
 @media screen and (max-width: 985px) {

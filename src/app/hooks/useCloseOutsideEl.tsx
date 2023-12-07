@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, RefObject, useEffect } from "react";
 import { TVisibility } from "../components/header/Header";
 
 const useCloseOutsideEl = (
-	ref: RefObject<HTMLDivElement>,
+	ref: RefObject<HTMLDivElement | HTMLButtonElement>,
 	funcClose: Dispatch<SetStateAction<TVisibility>>,
 	isModal?: boolean
 ) => {

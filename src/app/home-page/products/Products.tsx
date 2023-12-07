@@ -49,7 +49,9 @@ export function Products() {
 			<div className={styles.productContainer}>
 				<div ref={containerRef} className={styles.productContainerInner}>
 					{prodArray.map((item, inx) => (
-						<Product {...item} key={inx} />
+						<div className={styles.flex_item}>
+							<Product {...item} key={inx} hamburger="bento" />
+						</div>
 					))}
 				</div>
 			</div>
