@@ -1,22 +1,20 @@
 "use client";
-
 import { useRef, useState } from "react";
 import { TVisibility } from "../components/header/Header";
 import Bento from "../components/icons/Bento";
-import Hamburger from "../components/icons/hamburger";
+import Hamburger from "../components/icons/Hamburger";
+
 import Sorting from "../components/icons/Sorting";
 import { MenuSortingSmall } from "../components/menu-sorting/MenuSorting";
 import { Product } from "../components/product/Product";
 import { Invitation } from "../home-page/Invitation-section/Invitation";
-
 import useCloseOutsideEl from "../hooks/useCloseOutsideEl";
 import { prodArray } from "../lib/const";
 import styles from "./styles.module.css";
-// import  * as "../components/product/styles.module.css";
 
 export default function ReeferContainers() {
 	const [isOpen, setIsOpen] = useState<TVisibility>("hidden");
-	const [hamburger, setHamburger] = useState("bento");
+	const [isHamburger, setHamburger] = useState("bento");
 
 	const refMenuButton = useRef<HTMLButtonElement>(null);
 	const handleToggleMenu = () => {
@@ -65,9 +63,9 @@ export default function ReeferContainers() {
 					</button>
 				</div>
 			</div>
-			<div className={styles[hamburger]}>
+			<div className={styles[isHamburger]}>
 				{prodArray.map((item, inx) => (
-					<Product {...item} key={inx} hamburger={hamburger} />
+					<Product {...item} key={inx} hamburger={isHamburger} />
 				))}
 			</div>
 			<Invitation />
