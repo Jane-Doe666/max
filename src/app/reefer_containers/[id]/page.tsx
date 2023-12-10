@@ -20,16 +20,16 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 						className={styles.img}
 						src="/container.png"
 						alt="container"
-						width={349}
-						height={349}
+						width={374}
+						height={374}
 						aria-label="Изображение продукта"
 					/>
 					<Image
 						className={styles.img}
 						src="/container.png"
 						alt="container"
-						width={349}
-						height={349}
+						width={374}
+						height={374}
 						aria-label="Изображение продукта"
 					/>
 					<div className={styles.order}>
