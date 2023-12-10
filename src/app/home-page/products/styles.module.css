@@ -1,5 +1,5 @@
 .products {
-	margin-top: 18px;
+	padding-top: 18px;
 	display: flex;
 	flex-direction: column;
 }
@@ -21,7 +21,9 @@
 }
 
 .scroll_buttuns {
-	margin-top: 18px;
+	padding-top: 18px;
+	margin-bottom: 25px;
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;

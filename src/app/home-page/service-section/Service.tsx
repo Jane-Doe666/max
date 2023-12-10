@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Service() {
 	return (
-		<section className={styles.service}>
+		<div className={styles.service}>
 			<h2 className={styles.service_header}>Мы продаём контейнеры.</h2>
 			<p className={styles.service_info}>
 				Можем осуществлять крупные поставки. Мы торгуем новыми
@@ -70,6 +70,6 @@ export function Service() {
 					/>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

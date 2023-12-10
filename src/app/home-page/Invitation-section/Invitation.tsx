@@ -9,7 +9,7 @@ import { useAppDispatch } from "@/app/lib/hooks";
 export function Invitation() {
 	const dispatch = useAppDispatch();
 	return (
-		<section className={styles.container}>
+		<div className={styles.container}>
 			<div className={styles.info}>
 				<h1 className={styles.header}>
 					Звоните и пишите,
@@ -38,6 +38,6 @@ export function Invitation() {
 			</div>
 
 			<div className={styles.imageContent}></div>
-		</section>
+		</div>
 	);
 }

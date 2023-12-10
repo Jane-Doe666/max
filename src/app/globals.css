@@ -30,8 +30,9 @@ main {
 }
 
 footer {
-	height: 721px;
-	padding: 30px 60px 0 60px;
+	/* height: 721px; */
+	padding: 30px 60px 0;
+	margin-bottom: 100px;
 }
 
 a {
@@ -110,7 +111,7 @@ button:hover {
 	}
 
 	footer {
-		padding: 30px 20px 330px;
+		padding: 30px 20px;
 		height: auto;
 	}
 	main {

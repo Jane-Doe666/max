@@ -8,24 +8,25 @@ const useCloseOutsideEl = (
 ) => {
 	useEffect(() => {
 		if (isModal === undefined || isModal) {
-			const handleClose = (event: MouseEvent | KeyboardEvent) => {
-				if (event instanceof KeyboardEvent && event.key === "Escape") {
-					funcClose("hidden");
-					return;
-				}
+			const handleOutsideClick = (event: MouseEvent) => {
 				const target = event.target as Node;
-
 				if (ref.current && !ref.current.contains(target)) {
 					funcClose("hidden");
 				}
 			};
 
-			document.addEventListener("click", handleClose);
-			document.addEventListener("keydown", handleClose);
+			const handleEscapeKey = (event: KeyboardEvent) => {
+				if (event.key === "Escape") {
+					funcClose("hidden");
+				}
+			};
+
+			document.addEventListener("click", handleOutsideClick);
+			document.addEventListener("keydown", handleEscapeKey);
 
 			return () => {
-				document.removeEventListener("click", handleClose);
-				document.removeEventListener("keydown", handleClose);
+				document.removeEventListener("click", handleOutsideClick);
+				document.removeEventListener("keydown", handleEscapeKey);
 			};
 		}
 	}, [ref, funcClose, isModal]);

@@ -45,7 +45,7 @@ export function Products() {
 	}, [startIndex, itemWidth]);
 
 	return (
-		<section className={styles.products}>
+		<div className={styles.products}>
 			<div className={styles.productContainer}>
 				<div ref={containerRef} className={styles.productContainerInner}>
 					{prodArray.map((item, inx) => (
@@ -67,6 +67,6 @@ export function Products() {
 					}}
 				/>
 			</div>
-		</section>
+		</div>
 	);
 }

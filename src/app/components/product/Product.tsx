@@ -20,20 +20,25 @@ export function Product(item: TProd) {
 		<div className={styles.product}>
 			<div
 				className={styles.bento}
-				onClick={() => handleClick({ dispatch, buttonName: "Подробнее" })}>
-				<Image
-					src="/container.png"
-					alt="container"
-					width={275}
-					height={225}
-					sizes="100vw"
-					className={styles.myImage}
-					aria-label="Изображение продукта"
-					style={{
-						width: "100%",
-						height: "auto",
-					}}
-				/>
+				// onClick={() => handleClick({ dispatch, buttonName: "Подробнее" })}
+			>
+				<Link
+					href={`/reefer_containers/${item.id}`}
+					aria-label="Узнать подробнее о продукте">
+					<Image
+						src="/container.png"
+						alt="container"
+						width={275}
+						height={225}
+						sizes="100vw"
+						className={styles.myImage}
+						aria-label="Изображение продукта"
+						style={{
+							width: "100%",
+							height: "auto",
+						}}
+					/>
+				</Link>
 			</div>
 
 			<div className={styles.info}>

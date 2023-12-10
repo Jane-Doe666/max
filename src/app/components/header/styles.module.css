@@ -137,6 +137,7 @@
 		padding: 20px;
 		max-width: 480px;
 	}
+
 	.logo {
 		width: 180px;
 		height: 61px;
@@ -153,10 +154,6 @@
 }
 
 @media screen and (max-width: 465px) {
-	.page_wrapper {
-		width: 100%;
-		padding: 10px 10px 330px;
-	}
 	.logo {
 		width: 147px;
 		height: 50px;

@@ -10,7 +10,7 @@ export function HomePage() {
 	const dispatch = useAppDispatch();
 
 	return (
-		<section className={styles.contacts_wrapper}>
+		<div className={styles.contacts_wrapper}>
 			<div className={styles.info}>
 				<ContactsBlock />
 			</div>
@@ -45,13 +45,16 @@ export function HomePage() {
 				</p>
 				<ul className={styles.servise_link}>
 					<li>
-						<a href="#">Покупка</a>
+						Покупка
+						{/* <a href="#">Покупка</a> */}
 					</li>
 					<li>
-						<a href="#">Продажа</a>
+						Продажа
+						{/* <a href="#">Продажа</a> */}
 					</li>
 					<li>
-						<a href="#">Лизинг</a>
+						Лизинг
+						{/* <a href="#">Лизинг</a> */}
 					</li>
 				</ul>
 
@@ -72,6 +75,6 @@ export function HomePage() {
 					className={styles.container}
 				/>
 			</div>
-		</section>
+		</div>
 	);
 }

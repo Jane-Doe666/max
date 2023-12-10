@@ -1,5 +1,5 @@
 .filters {
-	margin-left: 22px;
+	margin: 0 15px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -63,16 +63,6 @@
 	gap: 20px;
 }
 
-/* 
-.hamburger {
-	margin-top: 20px;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-
-	gap: 20px;
-} */
-
 @media screen and (max-width: 986px) {
 	.bento {
 		grid-template-columns: repeat(3, minmax(calc((100% - 40px) / 3), 230px));
@@ -88,7 +78,7 @@
 		grid-template-columns: repeat(2, minmax(calc((100% - 20px) / 3), 210px));
 	}
 	.filters {
-		margin-left: 0px;
+		margin: 0 5px;
 		font-size: 13px;
 	}
 
