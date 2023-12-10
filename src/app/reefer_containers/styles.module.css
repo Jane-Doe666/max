@@ -26,19 +26,19 @@
 	white-space: nowrap;
 }
 
-.filters button {
+.filters {
 	background: none;
 	font-size: 14px;
 	font-family: var(--font-onest-semibold);
 	color: var(--color-black-text);
 }
 
-.active {
-	color: var(--color-yellow-dark);
+.activeButton {
+	color: #ebae29;
 }
 
 .filters button:hover {
-	color: var(--hover-text);
+	color: #ebae29;
 }
 
 .filters button {
@@ -62,6 +62,7 @@
 	justify-content: center;
 	gap: 20px;
 }
+
 /* 
 .hamburger {
 	margin-top: 20px;
@@ -114,11 +115,24 @@
 		order: 7;
 	}
 
-	.filter_product button {
+	.filter_product button:nth-child(8) {
+		order: 8;
+	}
+
+	.button {
 		padding: 0 10px;
 		line-height: 37px;
 		border: solid #878787 1px;
 		border-radius: 4px;
+	}
+
+	.button:hover {
+		border: solid #ebae29 1px;
+	}
+
+	.activeButton {
+		border-radius: 4px;
+		border: solid #ebae29 1px;
 	}
 
 	.filter_view {

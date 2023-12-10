@@ -1,0 +1,14 @@
+.hamburger {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.img {
+	/* width: 40%; */
+}
+
+.button_details {
+	width: 164px;
+}

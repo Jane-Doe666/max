@@ -1,57 +1,107 @@
 const prod = {
-	name: "Рефрижераторный контейнер 40 футов Carrier SEBU 575175-1",
+	id: 1,
+	name: "Рефрижераторный контейнер 20 футов Thermo King SEBU 575175-1",
 	year: 2005,
-	size: "40 футов",
+	size: "20 футов",
 	condition: "Б/У (как на фото)",
 	type: "Поршневой",
 	price: "780 000",
+	used: false,
+	subType: "Thermo King",
 };
 
 const prod1 = {
-	name: "Рефрижераторный контейнер 40 футов Carrier SEBU 575175-1",
-	year: 2005,
+	id: 2,
+	name: "Рефрижераторный контейнер 40 футов Thermo King SEBU 575175-1",
+	year: 2006,
 	size: "40 футов",
 	condition: "Б/У (как на фото)",
 	type: "Поршневой",
 	price: "20 000",
+	used: true,
+	subType: "Thermo King",
 };
 
 const prod2 = {
-	name: "Рефрижераторный контейнер 40 футов Carrier SEBU 575175-1",
-	year: 2005,
-	size: "40 футов",
+	id: 3,
+	name: "Рефрижераторный контейнер 45 футов Daikin SEBU 575175-1",
+	year: 2007,
+	size: "45 футов",
 	condition: "Б/У (как на фото)",
 	type: "Поршневой",
 	price: "5 000",
+	used: true,
+	subType: "Daikin",
 };
 
 const prod3 = {
+	id: 4,
 	name: "Рефрижераторный контейнер 40 футов Carrier SEBU 575175-1",
-	year: 2005,
+	year: 2008,
 	size: "40 футов",
 	condition: "Б/У (как на фото)",
 	type: "Поршневой",
 	price: "1555 000",
+	used: false,
+	subType: "Carrier",
 };
 
 const prod4 = {
+	id: 5,
 	name: "Рефрижераторный контейнер 40 футов Carrier SEBU 575175-1",
-	year: 2005,
+	year: 2008,
 	size: "40 футов",
 	condition: "Б/У (как на фото)",
 	type: "Поршневой",
 	price: "666 000",
+	used: false,
+	subType: "Carrier",
+};
+
+const prod5 = {
+	id: 6,
+	name: "Рефрижераторный контейнер 20 футов Carrier SEBU 575175-1",
+	year: 2009,
+	size: "20 футов",
+	condition: "Б/У (как на фото)",
+	type: "Поршневой",
+	price: "666 000",
+	used: true,
+	subType: "Carrier",
+};
+
+const prod6 = {
+	id: 7,
+	name: "Рефрижераторный контейнер 20 футов Carrier SEBU 575175-1",
+	year: 2020,
+	size: "20 футов",
+	condition: "Б/У (как на фото)",
+	type: "Поршневой",
+	price: "666 000",
+	used: false,
+	subType: "Carrier",
+};
+const prod7 = {
+	id: 8,
+	name: "Рефрижераторный контейнер 45 футов Daikin SEBU 575175-1",
+	year: 2011,
+	size: "45 футов",
+	condition: "Б/У (как на фото)",
+	type: "Поршневой",
+	price: "5 000 000",
+	used: true,
+	subType: "Daikin",
 };
 
 export const prodArray = [
 	prod,
-	prod,
-	prod,
 	prod1,
-	prod,
 	prod2,
-	prod,
 	prod3,
+	prod4,
+	prod5,
+	prod6,
+	prod7,
 	prod4,
 	prod,
 ];

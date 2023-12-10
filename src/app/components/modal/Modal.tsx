@@ -24,6 +24,14 @@ export function Modal() {
 
 	useCloseOutsideEl(modalRef, handleClose, isModal);
 
+	useEffect(() => {
+		if (isModal) {
+			document.body.classList.add(styles.noScroll);
+		} else {
+			document.body.classList.remove(styles.noScroll);
+		}
+	}, [isModal]);
+
 	return (
 		<div className={isModal ? styles.visible : styles.hidden}>
 			<div className={styles.overlay}></div>

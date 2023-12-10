@@ -1,0 +1,148 @@
+.wrapper {
+	margin-bottom: 20px;
+}
+.header {
+	font-family: var(--font-onest-semibold);
+	font-size: 20px;
+}
+.imgBox {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.img {
+	border-radius: 15px;
+}
+
+.order {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.product span {
+	font-family: var(--font-raleway-regular);
+	line-height: 32px;
+	font-size: 14px;
+}
+
+.button {
+	margin-top: 20px;
+	width: 164px;
+}
+
+.dimensions .dimension {
+	display: flex;
+	justify-content: space-between;
+
+	border-bottom: 1px solid #d8d7d3;
+}
+
+.dimension span {
+	display: inline-block;
+	font-family: var(--font-onest-light);
+}
+
+.dimension span:first-child {
+	font-weight: bold;
+}
+
+.dimension span {
+	width: 50%;
+}
+
+.dimension span:nth-child(2) {
+	text-align: end;
+}
+
+.info {
+	max-width: 80%;
+}
+.info h2 {
+	margin-top: 15px;
+	font-family: var(--font-onest-semibold);
+	font-size: 14px;
+	line-height: 38px;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.contacts_block {
+	box-sizing: border-box;
+	padding: 20px;
+	min-width: 225px;
+
+	border-radius: 15px;
+	background-color: white;
+}
+
+.contacts_block {
+	margin-top: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4px;
+	font-family: var(--font-onest-semibold);
+	font-size: 19px;
+}
+
+.contacts_links {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+
+	font-family: var(--font-onest-regular);
+	font-size: 10px;
+
+	color: var(--color-grey);
+}
+
+.contacts_links li a {
+	color: var(--color-grey);
+}
+
+.contacts_links li :hover {
+	color: black;
+}
+
+.text {
+	font-family: var(--font-onest-semibold);
+	color: #ebae29;
+	font-size: 14px;
+}
+
+.textBlack {
+	font-family: var(--font-onest-semibold);
+	font-size: 16px;
+}
+
+.number {
+	color: #393939;
+	font-size: 18px;
+}
+
+.numberColor {
+	font-family: var(--font-onest-bold);
+	color: #ebae29;
+	font-size: 18px;
+}
+.free {
+	font-family: var(--font-raleway-regular);
+	font-size: 14px;
+}
+
+.numberFree {
+	color: #ebae29;
+}
+
+@media screen and (max-width: 900px) {
+	.info {
+		max-width: 100%;
+	}
+}

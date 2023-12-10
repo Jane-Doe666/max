@@ -4,26 +4,22 @@ import { handleClick } from "@/app/utils/func";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonUI } from "../button/ButtonUI";
+import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
+import { TProd } from "@/app/lib/types";
 
-type TProd = {
-	name: string;
-	year: number;
-	size: string;
-	condition: string;
-	type: string;
-	price: string;
-};
-
-export function Product(item: TProd & { hamburger: string }) {
-	const productClass =
-		item.hamburger === "hamburger" ? styles.productHamburger : styles.product;
-
+export function Product(item: TProd) {
+	const router = useRouter();
 	const dispatch = useAppDispatch();
+
+	const handleProductPage = () => {
+		router.push(`/reefer_containers/${item.id}`);
+	};
+
 	return (
-		<div className={productClass}>
+		<div className={styles.product}>
 			<div
-				className={styles[item.hamburger] || styles.bento}
+				className={styles.bento}
 				onClick={() => handleClick({ dispatch, buttonName: "Подробнее" })}>
 				<Image
 					src="/container.png"
@@ -32,6 +28,7 @@ export function Product(item: TProd & { hamburger: string }) {
 					height={225}
 					sizes="100vw"
 					className={styles.myImage}
+					aria-label="Изображение продукта"
 					style={{
 						width: "100%",
 						height: "auto",
@@ -40,16 +37,24 @@ export function Product(item: TProd & { hamburger: string }) {
 			</div>
 
 			<div className={styles.info}>
-				<Link href="#" className={styles.prod_name}>
+				<Link
+					href={`/reefer_containers/${item.id}`}
+					className={styles.prod_name}
+					aria-label="Узнать подробнее о продукте">
 					{item.name}
 				</Link>
+
 				<p>Год выпуска: {item.year}</p>
 				<p>Размеры: {item.size}</p>
 				<p>Состояние: Б/У (как на фото)</p>
 				<p>Тип компрессора: {item.type}</p>
 				<p className={styles.prod_price}>{item.price} ₽</p>
 				<div className={styles.button_details}>
-					<ButtonUI name="Подробнее" />
+					<ButtonUI
+						name="Подробнее"
+						onClick={handleProductPage}
+						aria-label="Узнать подробнее о продукте"
+					/>
 				</div>
 			</div>
 		</div>
